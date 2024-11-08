@@ -12,5 +12,5 @@ function sumValues(...args) {
     (sum, currentValue) => sum + currentValue * 10,
     0
   );
-  console.log(sum / 10);
+  return sum / 10;
 }
