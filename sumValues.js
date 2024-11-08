@@ -2,7 +2,7 @@ function sumValues(...args) {
   const convertedArgs = args.map((arg) => {
     const convertedArg = parseFloat(arg);
     if (isNaN(convertedArg)) {
-      throw "引数に10進数としてパースできない値が含まれています";
+      throw new Error("引数に10進数としてパースできない値が含まれています");
     }
 
     return convertedArg;
