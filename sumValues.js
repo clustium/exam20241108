@@ -1,4 +1,4 @@
-function sumValues(...args) {
+export default function sumValues(...args) {
   const convertedArgs = args.map((arg) => {
     const convertedArg = parseFloat(arg);
     if (isNaN(convertedArg)) {
