@@ -1,6 +1,6 @@
 function sumValues(...args) {
   const convertedArgs = args.map((arg) => {
-    const convertedArg = parseInt(arg, 10);
+    const convertedArg = parseFloat(arg);
     if (isNaN(convertedArg)) {
       throw "引数に10進数としてパースできない値が含まれています";
     }
@@ -9,8 +9,8 @@ function sumValues(...args) {
   });
 
   const sum = convertedArgs.reduce(
-    (sum, currentValue) => (sum += currentValue),
+    (sum, currentValue) => (sum += currentValue * 10),
     0
   );
-  console.log(sum);
+  console.log(sum / 10);
 }
