@@ -9,7 +9,7 @@ function sumValues(...args) {
   });
 
   const sum = convertedArgs.reduce(
-    (sum, currentValue) => (sum += currentValue * 10),
+    (sum, currentValue) => sum + currentValue * 10,
     0
   );
   console.log(sum / 10);
